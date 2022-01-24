@@ -147,6 +147,26 @@ void LCD_SendNumber(sint32_t num)
 }
 
 
+
+void Delay(uint32_t delay)
+{
+	uint32_t i =0;
+	for ( i =0 ; i < delay ; i++)
+	{
+		asm volatile ("NOP");
+	}
+}
+
+
+void LCD_Clear_screen()
+{
+	LCD_SendCommand(0x01);
+	_delay_ms(2);
+	LCD_SendCommand(0x80);
+	_delay_ms(2);
+}
+
+/*
 void LCD_Check_Busy(void)
 {
 	uint8_t LCD_Busy_Flag=0;
@@ -170,24 +190,6 @@ void LCD_Check_Busy(void)
 
 }
 
-void Delay(uint32_t delay)
-{
-	uint32_t i =0;
-	for ( i =0 ; i < delay ; i++)
-	{
-		asm volatile ("NOP");
-	}
-}
-
-
-void LCD_Clear_screen()
-{
-	LCD_SendCommand(0x01);
-	_delay_ms(2);
-	LCD_SendCommand(0x80);
-	_delay_ms(2);
-}
-
 
 void LCD_MoveCursorLeft()
 {
@@ -200,4 +202,4 @@ void LCD_MoveCursorRight()
 	LCD_SendCommand(0x14);
 }
 
-
+*/

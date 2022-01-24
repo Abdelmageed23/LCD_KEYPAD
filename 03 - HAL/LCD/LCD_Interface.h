@@ -33,14 +33,15 @@
 void LCD_Init();
 void LCD_SendChar(uint8_t Char);
 void LCD_SendCommand(uint8_t Command);
-void LCD_Check_Busy();
 void LCD_SendNumber(sint32_t num);
-void Delay(uint32_t delay);
 void lcd_string(char *str);
 void LCD_Clear_screen();
-void LCD_MoveCursorLeft();
-void LCD_MoveCursorRight();
 void LCD_GotoXY (uint8_t line ,uint8_t postion);
 
-
+/*
+void LCD_Check_Busy();
+void Delay(uint32_t delay);
+void LCD_MoveCursorLeft();
+void LCD_MoveCursorRight();
+*/
 #endif

@@ -7,5 +7,6 @@
 #ifndef KEYPAD_PRIVATE_H
 #define KEYPAD_PRIVATE_H
 
+#define DELAY_TIME	50000
 
 #endif

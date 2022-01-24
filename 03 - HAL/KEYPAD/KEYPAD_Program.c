@@ -53,7 +53,7 @@ uint8_t KEYPAD_GetNum()
 			if(pin_check == LOW)
 			{
 				value = KPD_NUM[col][row];
-				for(uint32_t delay=0 ; delay <50000;delay++);
+				for(uint32_t delay=0 ; delay <DELAY_TIME;delay++);
 				while(pin_check == LOW)
 				{
 					DIO_GetPinVal(KPD_PORT,KPD_ROWS[row],&pin_check);
